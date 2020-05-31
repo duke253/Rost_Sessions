@@ -1,0 +1,11 @@
+import math
+a = input('Введите A:')
+a = float(a)
+b = input('Введите B:')
+b = float(b)
+c = input('Введите C:')
+c = float(c)
+d = input('Введите D:')
+d = float(d)
+p = math.sqrt((a+b-c)/(d*2+c**(2)))
+print(p)

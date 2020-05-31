@@ -1,0 +1,25 @@
+from datetime import datetime, timedelta
+
+string_date = '-----A2019-D09-01T12:01P:00 -----'
+current_time = datetime.now()
+delta_time = timedelta(hours=3)
+print(type(delta_time))
+print(delta_time)
+print(type(string_date))
+print(string_date)
+print(type(current_time))
+print(current_time)
+string_date_new = string_date.strip('-A ')
+print(string_date_new)
+time_from_text = datetime.strptime(string_date_new,'%Y-D%m-%dT%H:%MP:%S')
+print(type(time_from_text))
+print(time_from_text)
+time_object = (current_time - delta_time) - time_from_text
+print(type(time_object))
+print(time_object)
+time_object_seconds = time_object.total_seconds()
+time_object_seconds = int(time_object_seconds)
+print(type(time_object_seconds))
+print(time_object_seconds)
+string_text = "The difference between two datetime objects is {0} seconds".format(time_object_seconds)
+print(string_text)
